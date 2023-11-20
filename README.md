@@ -1,3 +1,3 @@
-# This small project handles Employee records by using Thymeleaf capability
+# First tutorial and practice project in Spring Boot in february 2023
 
-### Employee data come from xlsx and get loaded through using a CommandLineRunner injector Bean
+### Spring Boot basics
