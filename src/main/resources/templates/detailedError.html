@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title th:text="${pageTitle}">Napi SFJ</title>		<!-- Thymeleaf: Model brings data (as written in Controller) -->
+		<link rel="stylesheet" th:href="@{css/main.css}" href="../static/css/main.css"/>	<!-- Thymeleaf: ref to local version from static folder (besides the original!) -->
+	</head>
+	
+	<body>
+		<h1>
+			<p th:text="${pageTitle}">Napi SFJ</p>		<!-- Thymeleaf: Model brings data (as written in Controller) -->
+			<p th:text="#{yourip}">IP címed:</p>		<!-- info var from messages_lang.properties files, depending on the lang. setup of the browser -->
+
+		Hey! Something went wrong...
+				
+		</h1>
+			
+		<article>
+		
+			<header>
+				error: <h1 th:text="${error}">error</h1>
+			</header>
+			
+			<section>
+				message: <p th:text="${message}">message</p>
+				path: <p th:text="${path}">path</p>
+				status: <p th:text="${status}">status</p>
+				timestamp: <p th:text="${timestamp}">timestamp</p>
+			</section>
+
+		</article>	
+		
+		<footer>footer:
+			<h2><p th:text="#{footerText}">Készült...</p></h2>
+		</footer>
+		
+	</body>
+	
+</html>

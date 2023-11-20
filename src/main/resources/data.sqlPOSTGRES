@@ -1,0 +1,3 @@
+INSERT INTO Blogger (id, name, age) VALUES (1, 'Maykeya', 32);
+INSERT INTO Blogger (id, name, age) VALUES (2, 'Monyatta', 42);
+INSERT INTO Stories (id, title, content, posted, blogger_id) VALUES (1, 'Beautiful', 'That was a beautiful day...', '2022-10-14', (SELECT id FROM blogger WHERE name = 'Maykeya') );

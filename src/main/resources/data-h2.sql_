@@ -1,0 +1,6 @@
+INSERT INTO Blogger (id, name, age) VALUES (1, 'Maykeya', 32);
+INSERT INTO Blogger (id, name, age) VALUES (2, 'Pluto', 36);
+INSERT INTO Blogger (id, name, age) VALUES (3, 'Monyatta', 42);
+INSERT INTO Stories (id, title, content, posted, blogger_id) VALUES (1, 'Beautiful', 'That was a beautiful day...', '2022-10-14', (SELECT id FROM blogger WHERE name = 'Maykeya') );
+INSERT INTO Stories (id, title, content, posted, blogger_id) VALUES (2, 'Exciting', 'She was a beautiful girl...', '2022-11-17', (SELECT id FROM blogger WHERE name = 'Maykeya') );
+INSERT INTO Stories (id, title, content, posted, blogger_id) VALUES (3, 'Great hiking', 'We climbed up that mountain...', '2022-05-19', 2);

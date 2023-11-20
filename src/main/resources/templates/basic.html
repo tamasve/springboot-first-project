@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title th:text="${pageTitle}">Napi SFJ</title>		<!-- ThymeLeaf: Model brings data (as written in Controller) -->
+		<link rel="stylesheet" th:href="@{css/main.css}" href="../static/css/main.css"/>	<!-- ThymeLeaf: ref to local version from static folder (next to the original!) -->
+	</head>
+	
+	<body>
+		<h1>
+			<p th:text="${pageTitle}">Napi SFJ</p>		<!-- ThymeLeaf: $: Model brings data (as written in Controller) -->
+			<p th:text="#{yourip} +' 127.0.0.1'">IP címed:</p>		<!-- #: info var from messages_<lang>.properties files, depending on the lang. setup of the browser -->
+		</h1>										<!-- set lang.: 1. in app.prop file: spring.web.locale=en // 2. spec. setup in browser -->
+		
+		Hi Everyone! What's news? Here are the stories:
+		<hr/>
+		
+				<!-- ThymeLeaf: Model brings the array of Story objects here -->
+				
+		<article th:each="story : ${stories}">		<!-- ThymeLeaf foreach begin... 'story' will refer inside to 1 object in 'stories' list -->
+		
+			<header>
+				<h2 th:text="${story.title}">Title</h2>
+				<p th:text="${'Posted on '+story.getPostedAsString()}">Posted on xxxx</p>  		<!-- POJO method also can be called... -->
+			</header>
+			
+			<section>
+				<p th:utext="${story.content}">storybody</p>		<!-- utext: handles html (unescape text) -->
+			</section>
+			
+			<footer>
+				<address th:text="${'Sent by '+story.blogger.name}">		<!-- Story -> Blogger -> its name prop. ... -->
+					Sent by yyyy
+				</address>
+			</footer>
+			
+			<hr/>
+			
+		</article>								<!-- ThymeLeaf foreach end... -->
+		
+		<footer>
+			<h2><p th:text="#{footerText}">Készült...</p></h2>		<!-- from messages_<lang>.properties ... -->
+		</footer>
+		
+		<img src="images/akropolisz.png"/>
+	</body>
+	
+</html>
