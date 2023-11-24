@@ -8,6 +8,14 @@ import org.springframework.context.annotation.Bean;
 import com.firstproject.domain.Blogger;
 import com.firstproject.repository.BloggerRepository;
 
+
+/**
+ * First Spring Boot practice project during SFJ tutorials
+ * 
+ * February 2023
+ */
+
+
 @SpringBootApplication
 public class FirstProjectApplication {
 

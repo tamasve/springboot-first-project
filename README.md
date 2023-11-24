@@ -1,3 +1,4 @@
-# First tutorial and practice project in Spring Boot in february 2023
+# First Spring Boot practice project during SFJ tutorials in February 2023
 
-### Spring Boot basics
+### Controllers, Entities, Repositories, messages, pom, data input, H2, PostGreSQL
+
